@@ -1,10 +1,19 @@
+import billboard
+import pandas as pd
+import os
+import os.path
+import pickle
+
 from oauthlib.oauth2 import BackendApplicationClient
 from requests_oauthlib import OAuth2Session
 import time,json
-import pandas as pd
+import requests
+import re
+import random
+import urllib
+from bs4 import BeautifulSoup
+import numpy as np
 
-client_id = u'c7cdefa717bb477c8d04cb65978e7003'
-client_secret = u'4e40e729d5084d9099abda54036c53c2'
 
 def get_token():
     auth_url = u'https://accounts.spotify.com/api/token'
